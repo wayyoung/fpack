@@ -13,6 +13,7 @@ cd ${TOP_PATH}
 cd util-linux-2.33
 rm -Rf .build
 mkdir -p .build
+touch *
 cd .build
 ../configure --prefix=$INSTALL_PATH  --host=arm-linux-gnueabihf CFLAGS=-I${INSTALL_PATH}/include LDFLAGS=-L${INSTALL_PATH}/lib --enable-static-programs=fdisk,sfdisk --enable-libfdisk --enable-libuuid --without-python --without-systemd  --enable-libblkid --disable-makeinstall-chown
 make;make install
